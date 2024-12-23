@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
 import CodeBlock from './CodeBlock';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const basicExample = `import { Modal } from 'novtiq-modal';
 

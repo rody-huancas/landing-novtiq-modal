@@ -1,4 +1,5 @@
 import { useTheme } from '../contexts/ThemeContext';
+/*Icons */
 import { Sun, Moon } from 'lucide-react';
 
 export default function ThemeToggle() {

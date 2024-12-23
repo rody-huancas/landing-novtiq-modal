@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Terminal, Play, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+/*Icons */
+import { Terminal, Play, ArrowRight } from 'lucide-react';
 
 const installCommands: Record<'npm' | 'pnpm' | 'yarn', string> = {
-  npm: 'npm install novtiq-modal',
+  npm : 'npm install novtiq-modal',
   pnpm: 'pnpm add novtiq-modal',
   yarn: 'yarn add novtiq-modal',
 };

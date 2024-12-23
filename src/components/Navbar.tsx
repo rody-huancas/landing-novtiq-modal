@@ -1,7 +1,8 @@
-import { Github } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitch from "./LanguageSwitch";
 import { useLanguage } from "../contexts/LanguageContext";
+/*Icons */
+import { Github } from "lucide-react";
 
 export default function Navbar() {
   const { t } = useLanguage();

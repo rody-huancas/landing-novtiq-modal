@@ -4,33 +4,33 @@ import { Zap, Keyboard, Lock, Layout, Layers, Settings } from 'lucide-react';
 
 const features = [
   {
-    icon: Zap,
-    key: 'animations',
+    icon    : Zap,
+    key     : 'animations',
     gradient: 'from-pink-600 to-rose-600',
   },
   {
-    icon: Keyboard,
-    key: 'keyboard',
+    icon    : Keyboard,
+    key     : 'keyboard',
     gradient: 'from-purple-600 to-indigo-600',
   },
   {
-    icon: Lock,
-    key: 'scroll',
+    icon    : Lock,
+    key     : 'scroll',
     gradient: 'from-blue-600 to-cyan-600',
   },
   {
-    icon: Layout,
-    key: 'position',
+    icon    : Layout,
+    key     : 'position',
     gradient: 'from-teal-600 to-emerald-600',
   },
   {
-    icon: Layers,
-    key: 'sizes',
+    icon    : Layers,
+    key     : 'sizes',
     gradient: 'from-amber-600 to-orange-600',
   },
   {
-    icon: Settings,
-    key: 'customization',
+    icon    : Settings,
+    key     : 'customization',
     gradient: 'from-red-600 to-pink-600',
   }
 ];
