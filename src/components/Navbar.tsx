@@ -1,19 +1,21 @@
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitch from "./LanguageSwitch";
+import { useScroll } from "../kooks/useScroll";
 import { useLanguage } from "../contexts/LanguageContext";
 /*Icons */
 import { Github } from "lucide-react";
 
 export default function Navbar() {
   const { t } = useLanguage();
+  const { scrollToSection } = useScroll();
 
   return (
     <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <div className="flex items-center w-44">
+          <button className="w-44" onClick={() => scrollToSection("hero")}>
             <img src="/novtiq.svg" alt="Logo Novtiq" />
-          </div>
+          </button>
           <div className="flex items-center space-x-4">
             <a
               href="https://github.com/rody-huancas/novtiq-modal"

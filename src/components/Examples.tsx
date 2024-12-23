@@ -3,6 +3,7 @@ import CodeBlock from './CodeBlock';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const basicExample = `import { Modal } from 'novtiq-modal';
+import "novtiq-modal/dist/novtiq-modal.css";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,7 @@ function App() {
 }`;
 
 const advancedExample = `import { Modal } from 'novtiq-modal';
+import "novtiq-modal/dist/novtiq-modal.css";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,7 +61,7 @@ export default function Examples() {
   const [activeTab, setActiveTab] = useState<'basic' | 'advanced'>('basic');
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-800/50">
+    <section id='examples' className="py-20 bg-gray-50 dark:bg-gray-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
           {t('examples.title')}

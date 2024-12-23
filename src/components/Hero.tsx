@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useScroll } from '../kooks/useScroll';
 /*Icons */
 import { Terminal, Play, ArrowRight } from 'lucide-react';
 
@@ -12,9 +13,10 @@ const installCommands: Record<'npm' | 'pnpm' | 'yarn', string> = {
 export default function Hero() {
   const [activeTab, setActiveTab] = useState<'npm' | 'pnpm' | 'yarn'>('npm');
   const { t } = useLanguage();
+  const { scrollToSection } = useScroll();
 
   return (
-    <div className="relative overflow-hidden">
+    <section id='hero' className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950/20 dark:to-blue-950/20" />
       
       <div className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -28,11 +30,11 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="inline-flex items-center px-6 py-3 rounded-full bg-purple-600 text-white hover:bg-purple-700 transition-colors">
+              <button className="inline-flex items-center px-6 py-3 rounded-full bg-purple-600 text-white hover:bg-purple-700 transition-colors" onClick={() => scrollToSection('documentation')}>
                 <ArrowRight className="mr-2 h-5 w-5" />
                 {t('hero.cta')}
               </button>
-              <button className="inline-flex items-center px-6 py-3 rounded-full border-2 border-purple-600 text-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors">
+              <button className="inline-flex items-center px-6 py-3 rounded-full border-2 border-purple-600 text-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors" onClick={() => scrollToSection('examples')}>
                 <Play className="mr-2 h-5 w-5" />
                 {t('hero.demo')}
               </button>
@@ -66,6 +68,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
