@@ -4,6 +4,7 @@ import { useScroll } from "../kooks/useScroll";
 import { useLanguage } from "../contexts/LanguageContext";
 /*Icons */
 import { Github } from "lucide-react";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const { t } = useLanguage();
@@ -14,7 +15,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <button className="w-44" onClick={() => scrollToSection("hero")}>
-            <img src="/novtiq.svg" alt="Logo Novtiq" />
+            <Logo />
           </button>
           <div className="flex items-center space-x-4">
             <a
