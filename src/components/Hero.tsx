@@ -46,7 +46,7 @@ export default function Hero() {
                   {Object.keys(installCommands).map((pkg) => (
                     <button
                       key={pkg}
-                      onClick={() => setActiveTab(pkg as 'npm' | 'pnpm' | 'yarn')} // Corregido
+                      onClick={() => setActiveTab(pkg as 'npm' | 'pnpm' | 'yarn')}
                       className={`px-4 py-2 text-sm font-medium ${
                         activeTab === pkg
                           ? 'bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400'

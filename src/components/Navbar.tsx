@@ -1,10 +1,10 @@
+import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitch from "./LanguageSwitch";
 import { useScroll } from "../kooks/useScroll";
 import { useLanguage } from "../contexts/LanguageContext";
 /*Icons */
 import { Github } from "lucide-react";
-import Logo from "./Logo";
 
 export default function Navbar() {
   const { t } = useLanguage();
@@ -25,7 +25,7 @@ export default function Navbar() {
               className="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               <Github size={20} />
-              <span>{t("nav.github")}</span>
+              <span className="hidden sm:block">{t("nav.github")}</span>
             </a>
             <LanguageSwitch />
             <ThemeToggle />
